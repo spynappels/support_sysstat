@@ -6,5 +6,10 @@
 # @example
 #   include support_sysstat
 class support_sysstat {
-  include support_sysstat::install
+  if $facts['os']['family'] =~ /^(RedHat|Debian)$/ { include support_sysstat::install }
+  elsif $facts['kernel'] == 'Linux' {
+    notify{'This module may have unintended consequences on non-EL or Debian/Ubuntu distros.':}
+    include support_sysstat::install
+  }
+  else { warning('This sysstat module does not work on non-Linux nodes.') }
 }
