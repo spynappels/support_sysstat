@@ -1,10 +1,12 @@
 {
   "name": "spynappels-support_sysstat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Stefan Pijnappels",
   "summary": "Module to install and run sysstat.",
   "license": "Apache-2.0",
   "source": "https://github.com/spynappels/support_sysstat",
+  "project_page": "https://github.com/spynappels/support_sysstat/wiki",
+  "issues_url": "https://github.com/spynappels/support_sysstat/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
