@@ -1,11 +1,7 @@
 
 # support_sysstat
 
-Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules.html .
-
-The README template below provides a starting point with details about what information to include in your README.
-
-
+This module is designed to install sysstat on EL and Debian Linux systems to facilitate gathering troubleshooting data for Puppet Support cases.
 
 
 
@@ -15,7 +11,6 @@ The README template below provides a starting point with details about what info
 
 1. [Description](#description)
 2. [Setup - The basics of getting started with support_sysstat](#setup)
-    * [What support_sysstat affects](#what-support_sysstat-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with support_sysstat](#beginning-with-support_sysstat)
 3. [Usage - Configuration options and additional functionality](#usage)
@@ -25,35 +20,25 @@ The README template below provides a starting point with details about what info
 
 ## Description
 
-Start with a one- or two-sentence summary of what the module does and/or what problem it solves. This is your 30-second elevator pitch for your module. Consider including OS/Puppet version it works with.
+This module is designed to make it easier to capture relevant information on resource usage of Linux nodes, specifically in cases where this information will assist in troubleshooting tickets raised with Puppet Support.
 
-You can give more descriptive information in a second paragraph. This paragraph should answer the questions: "What does this module *do*?" and "Why would I use it?" If your module has a range of functionality (installation, configuration, management, etc.), this is the time to mention it.
+This module will install sysstat on any required node if it is not already present, and configure it with some sane defaults to capture basic resource data. It will also eventually allow less common data capture options to be enabled at will, as well as adding a mechanism to retrieve the captured data from any Linux node to the Puppet Master for passing to Puppet Support.
 
 ## Setup
 
-### What support_sysstat affects **OPTIONAL**
 
-If it's obvious what your module touches, you can skip this section. For example, folks can probably figure out that your mysql_instance module affects their MySQL instances.
+### Setup Requirements
 
-If there's more that they should know about, though, this is the place to mention:
+This module requires the `puppetlabs-stdlib` module as a pre-requisite.
 
-* Files, packages, services, or operations that the module will alter, impact, or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled, another module, etc.), mention it here.
-
-If your most recent release breaks compatibility or requires particular steps for upgrading, you might want to include an additional "Upgrading" section here.
 
 ### Beginning with support_sysstat
 
-The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
+To start with the `support_sysstat` module, simply include the `support_sysstat` class in your `site.pp` or use the Console to classify a node group with the `support_sysstat` class.
 
 ## Usage
 
-This section is where you describe how to customize, configure, and do the fancy stuff with your module here. It's especially helpful if you include usage examples and code samples for doing things with your module.
+Work in Progress.
 
 ## Reference
 
@@ -70,7 +55,7 @@ Users need a complete list of your module's classes, types, defined types provid
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc. If there are Known Issues, you might want to include them under their own heading here.
+This module is designed to work on EL and Debian based Linux distributions. Other Linux distributions may work but are not guaranteed to.
 
 ## Development
 
