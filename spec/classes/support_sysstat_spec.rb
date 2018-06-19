@@ -6,6 +6,7 @@ describe 'support_sysstat' do
       let(:facts) { os_facts }
 
       it { is_expected.to compile }
+      it { is_expected.to contain_class('support_sysstat::install')}
     end
   end
 end
