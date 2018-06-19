@@ -7,5 +7,5 @@
 #   include support_sysstat
 class support_sysstat {
   if $facts['os']['family'] =~ /^(RedHat|Debian)$/ { include support_sysstat::install }
-  else { warning('This sysstat module only supports EL and Debian derivative Linux nodes.') }
+  else { fail('This sysstat module only supports EL and Debian derivative Linux nodes.') }
 }
