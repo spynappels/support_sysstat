@@ -16,7 +16,7 @@ This module is designed to install sysstat on EL and Debian Linux systems to fac
 3. [Usage - Configuration options and additional functionality](#usage)
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+6. [Changelog](#changelog)
 
 ## Description
 
@@ -38,29 +38,20 @@ To start with the `support_sysstat` module, simply include the `support_sysstat`
 
 ## Usage
 
-Work in Progress.
+Including the `support_sysstat` class in a node's classification will ensure that sysstat is installed, and for Debian based nodes it will also enable `sa2` processing of the binary data collected by `sa1`, which is not enabled by default on Debian and derivatives such as Ubuntu.
 
 ## Reference
 
-Users need a complete list of your module's classes, types, defined types providers, facts, and functions, along with the parameters for each. You can provide this list either via Puppet Strings code comments or as a complete list in the README Reference section.
+There are 2 classes provided by this module:
 
-* If you are using Puppet Strings code comments, this Reference section should include Strings information so that your users know how to access your documentation.
+* support_sysstat - Wrapper class to install and manage sysstat on Linux nodes.
 
-* If you are not using Puppet Strings, include a list of all of your classes, defined types, and so on, along with their parameters. Each element in this listing should include:
-
-  * The data type, if applicable.
-  * A description of what the element does.
-  * Valid values, if the data type doesn't make it obvious.
-  * Default value, if any.
+* support_sysstat::install - Installs sysstat and ensures that the cron jobs are enabled.
 
 ## Limitations
 
 This module is designed to work on EL and Debian based Linux distributions. Other Linux distributions may work but are not guaranteed to.
 
-## Development
+## Changelog
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
-
-## Release Notes/Contributors/Etc. **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You can also add any additional sections you feel are necessary or important to include here. Please use the `## ` header.
+0.1.0 - Initial release.
