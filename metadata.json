@@ -2,7 +2,7 @@
   "name": "spynappels-support_sysstat",
   "version": "0.3.0",
   "author": "Stefan Pijnappels",
-  "summary": "This module makes it easy to install and configure sysstat and provide Puppet Support with specific data on system resource use. It is designed to be used in conjunction with other metrics collection tools to provide an overall view of the resource state of any EL or Debian based Linux system.",
+  "summary": "This module makes it easy to install and configure sysstat and provide Puppet Support with specific data on system resource use.",
   "license": "Apache-2.0",
   "source": "https://github.com/spynappels/support_sysstat",
   "project_page": "https://github.com/spynappels/support_sysstat/wiki",
