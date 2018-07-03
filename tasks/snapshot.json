@@ -1,0 +1,7 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Displays a snapshot of current day's captured metrics",
+  "parameters": {
+  }
+}
