@@ -9,5 +9,14 @@ elif [[ $(/usr/bin/lsb_release -si 2> /dev/null) =~ ^(Ubuntu|Debian)$ ]]; then
 else
   echo "Unsupported OS"; exit 1
 fi
+options=''
 
-$(/usr/bin/which sar) -A -f $file
+if test "$PT_start"; then
+  options=$options" -s "$PT_start
+fi
+
+if test "$PT_end"; then
+  options=$options" -s "$PT_end
+fi
+
+$(/usr/bin/which sar) $options -A -f $file

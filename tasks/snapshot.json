@@ -3,5 +3,13 @@
   "supports_noop": false,
   "description": "Displays a snapshot of current day's captured metrics",
   "parameters": {
+    "start": {
+      "description": "The start time for the snapshot in HH:MM:SS notation",
+      "type": "Optional[String[1]]"
+    },
+    "end": {
+      "description": "The end time for the snapshot in HH:MM:SS notation",
+      "type": "Optional[String[1]]"
+    }
   }
 }

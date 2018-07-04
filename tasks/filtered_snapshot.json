@@ -1,0 +1,31 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "This task returns a filtered snapshot of current day's captured metrics",
+  "parameters": {
+    "block": {
+      "description": "Return metrics for block devices",
+      "type": "Optional[Boolean]"
+    },
+    "network": {
+      "description": "Return metrics for network interfaces",
+      "type": "Optional[Boolean]"
+    },
+    "processors": {
+      "description": "Return metrics for CPUs",
+      "type": "Optional[Boolean]"
+    },
+    "memory": {
+      "description": "Return metrics for memory usage",
+      "type": "Optional[Boolean]"
+    },
+    "swap": {
+      "description": "Return metrics for swap usage",
+      "type": "Optional[Boolean]"
+    },
+    "tables": {
+      "description": "Return metrics for file and inode tables",
+      "type": "Optional[Boolean]"
+    }
+  }
+}
