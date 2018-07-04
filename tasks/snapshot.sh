@@ -16,7 +16,7 @@ if test "$PT_start"; then
 fi
 
 if test "$PT_end"; then
-  options=$options" -s "$PT_end
+  options=$options" -e "$PT_end
 fi
 
 $(/usr/bin/which sar) $options -A -f $file
