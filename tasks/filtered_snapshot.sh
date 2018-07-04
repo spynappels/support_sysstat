@@ -35,6 +35,14 @@ if test "$PT_tables" = true; then
   options=$options" -v"
 fi
 
-echo $options
+if test "$PT_start"; then
+  options=$options" -s "$PT_start
+fi
+
+if test "$PT_end"; then
+  options=$options" -e "$PT_end
+fi
+
+echo "Options selected were "$options
 
 $(/usr/bin/which sar) $options -f $file
