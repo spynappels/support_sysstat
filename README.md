@@ -22,7 +22,7 @@ This module is designed to install sysstat on EL and Debian Linux systems to fac
 
 This module is designed to make it easier to capture relevant information on resource usage of Linux nodes, specifically in cases where this information will assist in troubleshooting tickets raised with Puppet Support.
 
-This module will install sysstat on any required node if it is not already present, and configure it to summarise all captured data daily. It will also eventually add a mechanism to retrieve the captured data from any Linux node to the Puppet Master for passing to Puppet Support using Tasks.
+This module will install sysstat on any required node if it is not already present, and configure it to summarise all captured data daily. It also includes a number of tasks to make it simpler to see the captured metrics within the Console.
 
 ## Setup
 
@@ -42,6 +42,10 @@ Including the `support_sysstat` class in a node's classification will ensure tha
 
 The `sa2` binary is called with the `-A` flag, which means that by default all the counters and datapoints will be returned. There is little overhead in doing this which is why it's not been changed from the default.
 
+This module also includes 2 Tasks:
+* A task to return all captured metrics for the current day with an optional `start` and `end` parameter to enable time bounds. These parameters must be entered in `HH:MM:SS` format.
+* A task that allows only specific metrics to be returned. The required metrics can simply be selected by changing a required parameter to `true`. The available metrics are `block`(block device metrics), `network` (network metrics), `processors` (CPU metrics), `memory` (memory metrics), `swap` (swap metrics) and `tables` (file and inode table metrics). There are also the same optional time bound as for the previous task.
+
 ## Reference
 
 There are 2 classes provided by this module:
@@ -49,6 +53,12 @@ There are 2 classes provided by this module:
 * support_sysstat - Wrapper class to install and manage sysstat on Linux nodes.
 
 * support_sysstat::install - Installs sysstat and ensures that the cron jobs are enabled.
+
+There are also 3 tasks provided by this module:
+
+* support_sysstat::snapshot - Task to display all captured metrics for the current day in the Console.
+
+* support_sysstat::filtered_snapshot - Task to display only selected metrics for the current day in the Console.
 
 ## Limitations
 
