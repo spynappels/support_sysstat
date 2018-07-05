@@ -45,7 +45,7 @@ The `sa2` binary is called with the `-A` flag, which means that by default all t
 This module also includes 3 Tasks:
 * A task to return all captured metrics for the current day with an optional `start` and `end` parameter to enable time bounds. These parameters must be entered in `HH:MM:SS` format.
 * A task that allows only specific metrics to be returned. The required metrics can simply be selected by changing a required parameter to `true`. The available metrics are `block`(block device metrics), `network` (network metrics), `processors` (CPU metrics), `memory` (memory metrics), `swap` (swap metrics) and `tables` (file and inode table metrics). There are also the same optional time bound as for the previous task.
-* A task that returns all or selected metrics for any given day for which there is a `saXX` file in the save directory. The day of the month must be provided in a 2 digit `DD` format and there is the same optional time bound available within that day as for the previous two tasks.
+* A task that returns all or selected metrics for any given day for which there is a `saXX` file in the save directory. The day of the month must be provided in a 2 digit `DD` formatted string and there is the same optional time bound available within that day as for the previous two tasks.
 
 ## Reference
 
