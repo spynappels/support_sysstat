@@ -1,0 +1,47 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "A short description of this task",
+  "parameters": {
+    "day": {
+      "description": "Select day of month in 2 digit notation",
+      "type": "String[2]"
+    },
+    "all": {
+      "description": "Return all collected metrics",
+      "type": "Optional[Boolean]"
+    },
+    "block": {
+      "description": "Return metrics for block devices",
+      "type": "Optional[Boolean]"
+    },
+    "network": {
+      "description": "Return metrics for network interfaces",
+      "type": "Optional[Boolean]"
+    },
+    "processors": {
+      "description": "Return metrics for CPUs",
+      "type": "Optional[Boolean]"
+    },
+    "memory": {
+      "description": "Return metrics for memory usage",
+      "type": "Optional[Boolean]"
+    },
+    "swap": {
+      "description": "Return metrics for swap usage",
+      "type": "Optional[Boolean]"
+    },
+    "tables": {
+      "description": "Return metrics for file and inode tables",
+      "type": "Optional[Boolean]"
+    },
+    "start": {
+      "description": "The start time for the snapshot in HH:MM:SS notation",
+      "type": "Optional[String[1]]"
+    },
+    "end": {
+      "description": "The end time for the snapshot in HH:MM:SS notation",
+      "type": "Optional[String[1]]"
+    }
+  }
+}
