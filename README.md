@@ -69,7 +69,7 @@ This module is designed to work on EL and Debian based Linux distributions. Othe
 
 ## Changelog
 
-0.1.0 - Initial release.
-0.2.0 - README Style and metadata.json updates.
-0.3.0 - Update README.
-0.4.0 - Added Tasks.
+0.1.0 - Initial release.\
+0.2.0 - README Style and metadata.json updates.\
+0.3.0 - Update README.\
+0.4.0 - Added Tasks.\
