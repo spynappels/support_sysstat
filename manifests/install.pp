@@ -12,10 +12,11 @@ class support_sysstat::install {
 
   if $facts['os']['family'] == 'Debian' {
     file_line {'enable_sa2':
-      ensure => 'present',
-      path   => '/etc/default/sysstat',
-      line   => 'ENABLED="true"',
-      match  => '^ENABLED\=\"false\"'
+      ensure  => 'present',
+      path    => '/etc/default/sysstat',
+      line    => 'ENABLED="true"',
+      match   => '^ENABLED\=\"false\"',
+      require => Package['sysstat'],
     }
   }
 }
